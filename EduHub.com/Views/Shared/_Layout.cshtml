@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @*@Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="~/Scripts/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Scripts/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Scripts/css/bootstrap-grid.css" rel="stylesheet" />
+    <link href="~/Scripts/css/bootstrap-grid.min.css" rel="stylesheet" />
+    <script src="~/Scripts/bootstrapjs/bootstrap.js"></script>
+    <script src="~/Scripts/bootstrapjs/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-size: 28px;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            position: -webkit-sticky; /* Safari */
+            position: sticky;
+            top: 0;
+        }
+
+        li {
+            float: left;
+        }
+
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                li a:hover {
+                    background-color: #111;
+                }
+
+        .active {
+            background-color: #4CAF50;
+        }
+        /* url('https://fonts.googleapis.com/css?family=Alegreya+Sans:800');*/
+
+
+        .nav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            opacity: .9;
+            overflow-x: hidden;
+            padding-top: 60px;
+            transition: 0.7s;
+        }
+        #Sidenavbar a {
+            background-color: darkgrey;
+            display: block;
+            border: solid 1px darkcyan;
+            text-decoration: none;
+        }
+
+            .nav a {
+                display: block;
+                padding: 20px 30px;
+                font-size: 25px;
+                text-decoration: none;
+                color: #ccc;
+            }
+
+                .nav a:hover {
+                    color: #fff;
+                    transition: 0.4s;
+                }
+
+            .nav .close {
+                position: absolute;
+                top: 0;
+                right: 22px;
+                margin-left: 50px;
+                font-size: 30px
+            }
+
+        .slide a {
+            color: #000;
+            font-size: 36px;
+        }
+
+        #content {
+            padding: 20px;
+            transition: margin-left 0.7s;
+            overflow: hidden;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    @*<div class="header">
+        <h2>Scroll Down</h2>
+        <p>Scroll down to see the sticky effect.</p>
+    </div>*@
+    <ul>
+        <li><a href="#" class="close" onclick="openSlideMenu()">open</a></li>
+        <li><a href="#" class="close" onclick="closeSlideMenu()">close</a></li>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="row">
+        <div class="col-md-2" id="Sidenavbar" style="border: solid 1px black;
+        background-color: lightgray; ">
+            @*<ul class="col-md-2" style=" margin-top: 200px; display: grid;">*@
+            <div id="sidenavhref" style="position: fixed;display: contents;">
+                <a href="#" class="close" onclick="openSlideMenu()">open</a>
+                <a href="#" class="close" onclick="closeSlideMenu()">close</a>
+                <a class="active" href="#home">Home</a>
+                <a href="#" class="close" onclick="openSlideMenu()">open</a>
+                <a href="#" class="close" onclick="closeSlideMenu()">close</a>
+                <a class="active" href="#home">Home</a>
+                <a href="#" class="close" onclick="openSlideMenu()">open</a>
+                <a href="#" class="close" onclick="closeSlideMenu()">close</a>
+                <a class="active" href="#home">Home</a>
+            </div>
+            @*</ul>*@
+
+
+        </div>
+        <div class="col-md-10" id="bodycontainer" style="border:solid 1px black;">
+            col-10
+            twst 123456789
+            @RenderBody()
+        </div>
+    </div>
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+    </footer>
+
+   
+</body>
+</html>
+<script>
+    //function openSlideMenu() {
+    //    debugger
+    //    $("#bodycontainer").removeClass("col-md-12");
+    //    $("#bodycontainer").addClass("col-md-10");
+    //    $("#Sidenavbar").show();
+    //    $("#Sidenavbar").addClass("col-md-2");
+    //}
+    //function closeSlideMenu() {
+    //    debugger
+    //    $("#bodycontainer").removeClass("col-md-10");
+    //    $("#bodycontainer").addClass("col-md-12");
+    //    $("#Sidenavbar").removeClass("col-md-2");
+    //    $("#Sidenavbar").hide();
+        
+    //}
+</script>
