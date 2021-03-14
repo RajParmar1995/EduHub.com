@@ -4,74 +4,183 @@
 }
 
 <!DOCTYPE html>
-
 <html>
 <head>
     <title>Index</title>
+    <link href="~/Codemirror/jsfile/CodeMirror.css" rel="stylesheet" />
+    <script src="~/Codemirror/jsfile/CodeMirror.js"></script>
+    <script src="~/Codemirror/jsfile/codemirror_jsx.js"></script>
 </head>
 <body>
     <div class="row">
-        <div id="contend">
             <div style="margin-left: 20px; margin-right: 30px;">
                 <h1>HTML Introduction</h1>
                 <hr>
                 <p>HTML is the standard markup language for creating Web pages.</p>
                 <hr>
                 <h2>What is HTML?<h2>
-                        <div style="font-size: 18px;">
-                            <ul>
-                                <li>HTML stands for Hyper Text Markup Language</li>
-                                <li>HTML is the standard markup language for creating Web pages</li>
-                                <li>HTML describes the structure of a Web page</li>
-                                <li>HTML consists of a series of elements</li>
-                                <li>HTML elements tell the browser how to display the content</li>
-                                <li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.</li>
-                            </ul>
-                        </div>
-                        <hr>
-                        <h2>Simple HTML Document</h2>
-                        <div class="Eh-example">
-                            <h3>Example</h3>
-                            <div class="Eh-exampleinnner ">
-                                <br>
-                                <code1>&lt;!DOCTYPE html&gt;</code1><br>
-                                <code1>&lt;html&gt;</code1><br>
-                                <code1>&lt;head&gt;</code1><br>
-                                <code1>&lt;title&gt;</code1>Page Title<code1>&lt;/title&gt;</code1><br>
-                                <code1>&lt;/head&gt;</code1><br>
-                                <code1>&lt;body&gt;</code1><br>
-                                <code1>&lt;h1&gt;</code1> My First Heading <code1>&lt;/h1&gt;</code1><br>
-                                <code1>&lt;p&gt;</code1> My first paragraph. <code1>&lt;/p&gt;</code1><br>
-                                <code1>&lt;/body&gt;</code1><br>
-                                <code1>&lt;/html&gt;</code1><br>
-                                <br>
-                            </div>
-                            <a target="_blank" href="htmltryit/htmlintro.html" class="btn btn-success" style="margin: 10px;margin-left: 0px;">Demo </a>
-                        </div>
-                        <hr>
-                        <h2>Example Explained</h2>
-                        <ul style="font-size: 18px;">
-                            <li>The <code>&lt;!DOCTYPE html&gt;</code> declaration defines that this document is an HTML5 document</li>
-                            <li>The <code>&lt;html&gt;</code> element is the root element of an HTML page</li>
-                            <li>The <code>&lt;head&gt;</code> element contains meta information about the HTML page</li>
-                            <li>The <code>&lt;title&gt;</code> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab)</li>
-                            <li>The <code>&lt;body&gt;</code> element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.</li>
-                            <li>The <code>&lt;h1&gt;</code> element defines a large heading</li>
-                            <li>The <code>&lt;p&gt;</code> element defines a paragraph</li>
-                        </ul>
+    <div style="font-size: 18px;">
+        <ul>
+            <li>HTML stands for Hyper Text Markup Language</li>
+            <li>HTML is the standard markup language for creating Web pages</li>
+            <li>HTML describes the structure of a Web page</li>
+            <li>HTML consists of a series of elements</li>
+            <li>HTML elements tell the browser how to display the content</li>
+            <li>HTML elements label pieces of content such as "this is a heading", "this is a paragraph", "this is a link", etc.</li>
+        </ul>
+    </div>
+    <hr>
+    <h2>Basic HTML Page Code Example</h2>
+    <div class="Eh-example">
+        <h3>Example</h3>
+        <div class="Eh-exampleinnner ">
+            <form class="col-md-12">
+                <fieldset class="row p-0" style="border: 2px gray solid;">
+                    <textarea class="col-md-12 h-100" wrap="logical" spellcheck="false" name="sourceCode" id="sourceCode" style="resize:none; border:gray 1px solid; white-space: normal; float: left; font-size: 100%;font-weight:400;text-align:start; height:430px;">
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+</body>
+</html>
+</textarea>
+                </fieldset>
+            </form>
+        </div>
+        <a target="_blank" href="HTML/testtryIt" id="htmlintro" class="btn btn-success" style="margin: 10px;margin-left: 0px;">Demo </a>
+    </div>
+    <h2>Example Detailed</h2>
+    <ul style="font-size: 18px;">
+        <li>The <code>&lt;!DOCTYPE html&gt;</code> declaration defines that this document is an HTML5 document</li>
+        <li>The <code>&lt;html&gt;</code> element is the root element of an HTML page</li>
+        <li>The <code>&lt;head&gt;</code> element contains meta information about the HTML page</li>
+        <li>The <code>&lt;title&gt;</code> element specifies a title for the HTML page (which is shown in the browser's title bar or in the page's tab)</li>
+        <li>The <code>&lt;body&gt;</code> element defines the document's body, and is a container for all the visible contents, such as headings, paragraphs, images, hyperlinks, tables, lists, etc.</li>
+        <li>The <code>&lt;h1&gt;</code> element defines a large heading</li>
+        <li>The <code>&lt;p&gt;</code> element defines a paragraph</li>
+    </ul>
+    <hr>
 
-                        <hr>
-                        <h2><b>Look like this on web browser</h2>
-                        <p>The purpose of a web browser (Chrome, Edge, Firefox, Safari) is to read HTML documents and display them correctly.</p>
-                        <p>A browser does not display the HTML tags, but uses them to determine how to display the document:</p>
-                        <br>
-                        <img src="images\demoimg1.png" style="width: 100%; margin-bottom: 20px;" />
-            </div>
+    <h3>HTMLHistory</h3>
+    <p style="font-size: 18px;">
+        This Table Detail discusses a brief history of HTML language. Reading this will help you to get an idea of how HTML has been evolved through the years.
+    </p>
+    <br>
+    <br>
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Year</th>
+                <th>Version</th>
+            </tr>
+            <tr>
+                <td>1989</td>
+                <td>Tim Berners-Lee invented www</td>
+            </tr>
+            <tr>
+                <td>1991</td>
+                <td>Tim Berners-Lee invented HTML</td>
+            </tr>
+            <tr>
+                <td>1993</td>
+                <td>Dave Raggett drafted HTML+</td>
+            </tr>
+            <tr>
+                <td>1995</td>
+                <td>HTML Working Group defined HTML 2.0</td>
+            </tr>
+            <tr>
+                <td>1997</td>
+                <td>W3C Recommendation: HTML 3.2</td>
+            </tr>
+            <tr>
+                <td>1999</td>
+                <td>W3C Recommendation: HTML 4.01</td>
+            </tr>
+            <tr>
+                <td>2000</td>
+                <td>W3C Recommendation: XHTML 1.0</td>
+            </tr>
+            <tr>
+                <td>2008</td>
+                <td>WHATWG HTML5 First Public Draft</td>
+            </tr>
+            <tr>
+                <td>2012</td>
+                <td>WHATWG HTML5 Living Standard</td>
+            </tr>
+            <tr>
+                <td>2014</td>
+                <td>W3C Recommendation: HTML5</td>
+            </tr>
+            <tr>
+                <td>2016</td>
+                <td>W3C Candidate Recommendation: HTML 5.1</td>
+            </tr>
+            <tr>
+                <td>2017</td>
+                <td>W3C Recommendation: HTML5.1 2nd Edition</td>
+            </tr>
+            <tr>
+                <td>2017</td>
+                <td>W3C Recommendation: HTML5.2</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+</div>
         </div>
-        </div>
+        @*</div>*@
 </body>
 
 </html>
 <script>
     $("#htmlindex").addClass("active");
+    function colorcoding() {
+        var ua = navigator.userAgent;
+        //Opera Mini refreshes the page when trying to edit the textarea.
+        if (ua && ua.toUpperCase().indexOf("OPERA MINI") > -1) { return false; }
+        window.editor = CodeMirror.fromTextArea(document.getElementById("sourceCode"), {
+            mode: "htmlmixed",
+            htmlMode: true,
+            lineWrapping: true,
+            smartIndent: false,
+            addModeClass: true,
+            tabMode: "indent",
+            styleActiveLine: true,
+            lineNumbers: true,
+            readOnly: 'nocursor',
+        });
+
+        //if (ua && ua.toUpperCase().indexOf("OPERA MINI") > -1) { return false; }
+        //window.editor = CodeMirror.fromTextArea(document.getElementById("sourceCode1"), {
+        //    mode: "htmlmixed",
+        //    htmlMode: true,
+        //    lineWrapping: true,
+        //    smartIndent: false,
+        //    addModeClass: true,
+        //    tabMode: "indent",
+        //    styleActiveLine: true,
+        //    lineNumbers: true,
+        //    readOnly: 'nocursor',
+        //});
+        //  window.editor.on("change", function () {window.editor.save();});
+    }
+    colorcoding();
+    document.getElementById('htmlintro').onclick = function () {
+        var CodeArray = $("#sourceCode").val();
+        sessionStorage.setItem('tryitArray', JSON.stringify(CodeArray));
+       // window.location.href = 'HTML/testtryIt';
+    }
+    //document.getElementById('htmlintro1').onclick = function () {
+    //    var CodeArray = $("#sourceCode1").val();
+    //    sessionStorage.setItem('tryitArray', JSON.stringify(CodeArray));
+    //    // window.location.href = 'HTML/testtryIt';
+    //}
+
 </script>

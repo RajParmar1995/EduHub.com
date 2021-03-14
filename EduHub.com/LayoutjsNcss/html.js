@@ -1,7 +1,5 @@
 var checkval = 0;
 function sidenav(val) {
-    debugger
-    debugger
     if (checkval == 0) {
         openNav();
         checkval = 1;
@@ -12,7 +10,6 @@ function sidenav(val) {
 }
 
 function openNav() {
-    debugger
   document.getElementById("mySidenav").style.width = "15%";
   document.getElementById("main").style.marginLeft = "15%";
    document.getElementById("main").style.width = "96%";
@@ -26,19 +23,16 @@ function openNav() {
   //document.body.style.backgroundColor = "rgba(0,0,0,0.4)";  
 }
 function closeNav() {
-    debugger
   document.getElementById("mySidenav").style.width = "0%";
   document.getElementById("main").style.marginLeft= "0%";
    document.getElementById("main").style.width = "100%";
    document.getElementById("datastore").style.width = "96%";
    document.getElementById("contentrow").style.marginRight = "-1%";
   document.body.style.backgroundColor = "white";
-  //$('#closebtn').hide();
-  // $('#opennavbtn').show();
+    var abc = $("#sourceCode").val();
 }
 
 function ShowAndHide(_id) {
-    debugger
     var x = document.getElementById(_id);
     if (x.style.display == 'none') {
         x.style.display = 'block';
@@ -46,7 +40,6 @@ function ShowAndHide(_id) {
         x.style.display = 'none';
     }
 }
-
 
 // Add active class to the current button (highlight it)
 /*var header = document.getElementById("mySidenav");

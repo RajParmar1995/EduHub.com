@@ -3,23 +3,30 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
+    @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">*@
+    <link href="~/Layoutcontent/Css/bootstrap.min.css" rel="stylesheet" />
+    @*<link href="~/Layoutcontent/Css/bootstrap.min.css" rel="stylesheet" />*@
     <link type="text/css" href="~/LayoutjsNcss/htmlmaincss.css" rel="stylesheet" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    @*<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>*@
+    <script src="~/Layoutcontent/Js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/a0ec62624f.js"></script>
     <script src="~/LayoutjsNcss/html.js"></script>
+    <script>
+        $(window).on('beforeunload', function () {
+            $(window).scrollTop(0);
+        });
+    </script>
 </head>
 <body onLoad="openNav()">
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar navbar-fixed-top" style="background-color:black">
         <div class="container-fluid">
             <div class="navbar-header">
-                <span style="font-size:30px;cursor:pointer; color: white;" id="opennavbtn" onClick="sidenav()">&#9776;</span>
+                <span style="font-size:31px;cursor:pointer; color: white;" id="opennavbtn" onClick="sidenav()">&#9776;</span>
                 @*<span style="font-size:30px;cursor:pointer; color: white;" id="closebtn" onClick="closeNav()">&#9776; </span>*@
             </div>
             <div class="navbar-header">
-                <label style="color: gold;font-size: 30px;padding-left: 15px; padding-right: 15px; padding-right:15px;">Edu-Hub Tech</label>
+                <label style="color: orange;font-size: 30px;padding-left: 15px; padding-right: 15px; padding-right:15px;">Edu-Hub Tech</label>
             </div>
             <div class="topnav">
                 <ul>
@@ -42,7 +49,6 @@
             <a class="Btn" href="Html_Color.html">Html Color</a>
             <a class="Btn" href="Html_links.html">Html links</a>
         </div>
-
 
         <div id="main">
             <div class="row" id="HtmlIntro">
@@ -107,28 +113,11 @@
 </body>
 </html>
 <script>
-    // Add active class to the current button (highlight it)
-    debugger
-    var header = document.getElementById("mySidenav");
-    var btns = header.children.length;
-    debugger
-    for (var i = 0; i < btns; i++) {
-        btns[i].addEventListener("click", function () {
-            var current = document.getElementsByClassName("active");
-            current[0].className = current[0].className.replace(" active", "");
-            this.className += " active";
-        });
-    }
-
-    debugger
-
     window.onscroll = function () { myFunction() };
-
-    var header = document.getElementById("headersize");
+    var header = document.getElementById("mySidenav");
     var sticky = header.offsetTop;
 
     function myFunction() {
-        debugger
         if (window.pageYOffset > sticky) {
             header.classList.add("sticky");
         } else {

@@ -1,0 +1,119 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Edu-Hub Tech</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/Codemirror/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/Codemirror/css/bootstrapgrid.css" rel="stylesheet" />
+    <link href="~/Codemirror/css/bootstrapgridmin.css" rel="stylesheet" />
+    <link href="~/Codemirror/css/bootstrapmin.css" rel="stylesheet" />
+    <link href="~/Codemirror/css/bootstrapreboot.css" rel="stylesheet" />
+    <link href="~/Codemirror/css/bootstraprebootmin.css" rel="stylesheet" />
+    <link href="~/Codemirror/jsfile/CodeMirror.css" rel="stylesheet" />
+    <script src="~/Codemirror/jsfile/CodeMirror.js"></script>
+    <script src="~/Codemirror/jsfile/codemirror_jsx.js"></script>
+</head>
+
+<body style="overflow-x: hidden;">
+    <div class="row pl-3 p-0" style="background-color:black;height: 65px;">
+        <div class="navbar-header">
+            <label style="color: orange;font-size: 30px;padding-left: 15px; padding-right: 15px; padding-right:15px;">Edu-Hub Tech</label>
+        </div>
+    </div>
+    <div class="row p-2 pl-2" style="border: 2px solid rgb(146, 136, 136); margin: 5px;">
+        <div class="col-md-6 pl-3">
+            <div class="row p-1">
+                <div class="col-md-9" style="font-size: 25px;">
+                    Code
+                </div>
+                <div class="col-md-2">
+                    <input onclick="runCode();" type="button" value="Run Code" class="btn btn-success btn-sm">
+                </div>
+            </div>
+            <div class="row p-0">
+                <form class="col-md-12">
+                    <fieldset class="row p-0" style="border: 2px gray solid; height: 425px;">
+                        <textarea class="col-md-12 h-100" wrap="logical" spellcheck="false" name="sourceCode" id="SourceCode" style="resize:none; border:gray 1px solid; white-space: normal; float: left; font-size: 100%;font-weight:400;text-align:start; height:430px;">
+                       
+        </textarea>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-6 pl-3">
+            <div class="row mb-2">
+                <div class="col-md-10" style="font-size: 25px;">
+                    Result
+                </div>
+            </div>
+            <form>
+                <iframe name="targetCode" id="targetCode" class="col-md-12" style="height: 430px;border-bottom: 1px black solid;border-right: 1px solid black;"></iframe>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var CodeArray = '';
+        function getdata() {
+            debugger
+            var SessionString = sessionStorage.getItem('tryitArray');
+             CodeArray = JSON.parse(SessionString);
+            console.log(CodeArray);
+            document.getElementById("SourceCode").innerHTML = CodeArray;
+            //document.getElementById('SourceCode').value(CodeArray);
+            //document.querySelector('.CodeMirror').CodeMirror.setValue('VALUE')
+        }
+        getdata();
+        function runCode() {
+            debugger
+            if (window.editor) {
+              window.editor.save();
+            }
+            debugger
+           // $("#SourceCode").val(CodeArray);
+
+            var content = document.getElementById('SourceCode').value;
+            var iframe = document.getElementById('targetCode');
+            iframe = (iframe.contentWindow) ? iframe.contentWindow : (iframe.contentDocument.document) ? iframe.contentDocument.document : iframe.contentDocument;
+            iframe.document.open();
+            iframe.document.write(content);
+            iframe.document.close();
+           // return false;
+        }
+        //runCode();
+        function colorcoding() {
+            var ua = navigator.userAgent;
+            //Opera Mini refreshes the page when trying to edit the textarea.
+            if (ua && ua.toUpperCase().indexOf("OPERA MINI") > -1) { return false; }
+            window.editor = CodeMirror.fromTextArea(document.getElementById("SourceCode"), {
+                mode: "htmlmixed",
+                htmlMode: true,
+                lineWrapping: true,
+                smartIndent: false,
+                addModeClass: true,
+                tabMode: "indent",
+                styleActiveLine: true,
+                lineNumbers: true,
+
+            });
+
+            //window.editor.setCode('your string');
+
+            //.setValue("your code here");
+            //  window.editor.on("change", function () {window.editor.save();});
+            }
+        colorcoding();
+
+        
+    </script>
+</body>
+
+</html>

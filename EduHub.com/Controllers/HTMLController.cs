@@ -17,5 +17,9 @@ namespace EduHub.com.Controllers
         {
             return View();
         }
+        public ActionResult testtryIt()
+        {
+            return View();
+        }
     }
 }

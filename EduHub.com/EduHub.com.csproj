@@ -128,6 +128,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Codemirror\css\bootstrap.css" />
+    <Content Include="Codemirror\css\bootstrapgrid.css" />
+    <Content Include="Codemirror\css\bootstrapgridmin.css" />
+    <Content Include="Codemirror\css\bootstrapmin.css" />
+    <Content Include="Codemirror\css\bootstrapreboot.css" />
+    <Content Include="Codemirror\css\bootstraprebootmin.css" />
+    <Content Include="Codemirror\jsfile\CodeMirror.css" />
+    <Content Include="Codemirror\jsfile\CodeMirror.js" />
+    <Content Include="Codemirror\jsfile\codemirror_jsx.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -136,6 +145,8 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Layoutcontent\Css\bootstrap.min.css" />
+    <Content Include="Layoutcontent\Js\bootstrap.min.js" />
     <Content Include="LayoutjsNcss\html.js" />
     <Content Include="LayoutjsNcss\htmlmaincss.css" />
     <Content Include="Scripts\bootstrapjs\bootstrap.js" />
@@ -184,6 +195,7 @@
     <Content Include="Views\HTML\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutPage1.cshtml" />
     <Content Include="Views\HTML\basic.cshtml" />
+    <Content Include="Views\HTML\testtryIt.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

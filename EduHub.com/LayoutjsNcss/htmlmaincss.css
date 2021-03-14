@@ -120,7 +120,7 @@ p{
 }
 
 #contend {
-	border: 2px solid #F1EEED;
+	/*border: 2px solid #F1EEED;*/
 	height: 90%;
 	/*overflow: auto;*/
 	margin-left: 10px;
@@ -174,7 +174,7 @@ p{
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-color: #333;
+	background-color: #000000;
 	position: -webkit-sticky; /* Safari */
 	position: sticky;
 	top: 0;
